@@ -1,15 +1,15 @@
 function fun() {
     var l = [];
-    var n = $("#name").val();
-    var e = $("#email").val();
-    var p = $("#phn").val();
-    var ph =$("#photo").val();
-    var g = $('input[name="gender"]:checked').val();;
+    var name = $("#name").val();
+    var Email = $("#email").val();
+    var phone = $("#phn").val();
+    var photo =$("#photo").val();
+    var gender = $('input[name="gender"]:checked').val();;
     var selected = new Array();
     $("input[type=checkbox]:checked").each(function () {
         selected.push(this.value);
     });
-    var k = '<div class=s1>'+'<table><tr><td><p class="p"><strong>Name </strong>:'+`${n}`+'</p><p class="p"><strong>Email </strong>: '+`${e}`+'</p><p class="p"><strong>Phone </strong>:'+`${p}`+'</p><p class="p"><strong>Gender</strong> : '+`${g}`+'</p><p class="p"><strong>Skills</strong> : '+`${selected}`+'<td><img src="'+`${ph}`+'"></td></tr></table></div>';
-    $('#ss').append(k);
-    $("#fo").trigger("reset");
+    var values = '<div class=s1>'+'<table><tr><td><p class="p"><strong>Name </strong>:'+`${name}`+'</p><p class="p"><strong>Email </strong>: '+`${Email}`+'</p><p class="p"><strong>Phone </strong>:'+`${phone}`+'</p><p class="p"><strong>Gender</strong> : '+`${gender}`+'</p><p class="p"><strong>Skills</strong> : '+`${selected}`+'<td><img src="'+`${photo}`+'"></td></tr></table></div>';
+    $('#enroll').append(values);
+    $("#form").trigger("reset");
 }
